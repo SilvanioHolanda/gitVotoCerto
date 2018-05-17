@@ -8,6 +8,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
+		label{
+			margin : 30px;
+			margin-left : 300px;
+		}
 		#logar{
 			float: right;
 		}
@@ -15,6 +19,7 @@
 		    margin: 0px;
 		    margin-left: -50px;
 		}
+	
 	</style>
 </head>
 <body>
@@ -28,10 +33,13 @@
 	  <a href="#" class="w3-bar-item w3-button">Ajudas</a>
 	  <a href="#" class="w3-bar-item w3-button">Agenda</a>
 	  <a href="#" class="w3-bar-item w3-button">Regioes</a>
+	  <label> Bem Vindo!! {{session('usuario')}} </label>
 	  <a class="w3-bar-item w3-button"  href="{{ route('home') }}" id="logar" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> <i class="fa fa-sign-in"></i>Deslogar</a>
 	</div>		
 </div>
 </div>
+
+
 <dir class="fundo">
 				<img src="https://static.noticiasaominuto.com.br/stockimages/1920/naom_598d78dd397dc.jpg?1514987575">
 			</dir>

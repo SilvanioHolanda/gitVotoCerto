@@ -8,7 +8,7 @@ class LoginController extends Controller{
 
     public function Logar(Request $buscar) {
         if ($buscar->nome == 'admin' && $buscar->senha == '123') {
-            
+            session(['usuario' => 'Silvanio']);
             return redirect()->route('TelaInicial');
         }
         return redirect()->route('home')->with('erro', 'Senha ou Login inválido');
