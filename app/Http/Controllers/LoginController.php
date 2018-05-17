@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Session;
 
 use Illuminate\Http\Request;
 
@@ -14,9 +15,12 @@ class LoginController extends Controller{
         return redirect()->route('home')->with('erro', 'Senha ou Login inválido');
     }
 
-    public function Logout()
+    public function Logout(Request $request)
     {
+        Session::flush();
         return view('home');
+        
+
     }
 
     public function Tela()

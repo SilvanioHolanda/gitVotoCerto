@@ -9,8 +9,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
 		label{
-			margin : 30px;
-			margin-left : 300px;
+			margin-left: 485px;
+			display: inline-block;
+			margin-top: 8px;
 		}
 		#logar{
 			float: right;
@@ -34,7 +35,7 @@
 	  <a href="#" class="w3-bar-item w3-button">Agenda</a>
 	  <a href="#" class="w3-bar-item w3-button">Regioes</a>
 	  <label> Bem Vindo!! {{session('usuario')}} </label>
-	  <a class="w3-bar-item w3-button"  href="{{ route('home') }}" id="logar" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> <i class="fa fa-sign-in"></i>Deslogar</a>
+	  <a class="w3-bar-item w3-button"  href="{{ route('logout') }}" id="logar" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> <i class="fa fa-sign-in"></i>Deslogar</a>
 	</div>		
 </div>
 </div>

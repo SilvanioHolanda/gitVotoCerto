@@ -9,7 +9,7 @@ class LoginMiddleware{
     public function handle($request, Closure $next)
      {
         if (!session('usuario')){
-            return redirect()->route('logar');
+            return redirect()->route('home');
         }
         return $next($request);
     }

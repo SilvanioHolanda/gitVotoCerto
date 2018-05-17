@@ -51,7 +51,7 @@
 			</script>
 	
 			<dir class="fundo">
-				<img src="http://ampeblumenau.com.br/adm/plugins/elfinder/files/voto.jpg">
+				<img src="https://s3.amazonaws.com/dinder.com.br/wp-content/uploads/sites/125/2015/04/elei%C3%A7%C3%A3o1.jpg">
 			</dir>
 </body>
 </html>
