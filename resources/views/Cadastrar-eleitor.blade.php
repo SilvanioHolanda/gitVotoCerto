@@ -51,6 +51,12 @@
 		    <label>TITULO DE ELEITOR</label>
 		  	<input type="text" id="tituloeleitor" name="tituloeleitor" required>
 
+				<label>	ZONA</label>
+		  	<input type="text" id="zona" name="zona" required>
+
+				<label>SESSÃO</label>
+		  	<input type="text" id="sessao"  name="sessao" required>
+
 		  	<label>CPF</label>
 		  	<input type="text" id="cpf" name="cpf" required>
 
@@ -114,8 +120,7 @@
 		      <option value="primo">PRIMO</option>
 		    </select>
 
-		  	<label>Telefone</label>
-		  	<input type="text" id="telefone" name="telefone-P">
+
 		  	
 		  	<input type="button" value="+">
 	    	<input type="submit" value="Concluir">

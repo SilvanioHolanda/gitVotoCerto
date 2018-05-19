@@ -21,4 +21,9 @@ Route::get('EleitorSalvar', 'cadastrarController@Salvar')->name('EleitorSalvar')
 Route::get('cadastrarAjuda', 'cadastrarAjudaController@Ajuda')->name('cadastrarAjuda');
 Route::get('AjudaSalvar', 'cadastrarAjudaController@Ajuda_Salvar')->name('AjudaSalvar');
 
+
+
+Route::get('regioes', 'Regioes@pesquisaregioes')->name('regioes');
+
+
 });
