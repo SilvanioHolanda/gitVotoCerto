@@ -22,13 +22,13 @@ class CreateEleitorsTable extends Migration
             $table->string('email');
             $table->string('estadocivil');
             $table->string('tituloeleitor');
-            $table->string('zona');
-            $table->string('sessao');
+            $table->intinger('zona');
+            $table->intinger('sessao');
             $table->string('cpf');
             $table->string('cep');
             $table->string('bairro');
             $table->string('cidade');
-            $table->string('uf');
+            $table->string('uf'); 
             $table->string('numero');
             $table->string('complemento');
             $table->string('profissao');

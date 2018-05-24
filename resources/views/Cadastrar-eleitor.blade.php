@@ -18,7 +18,7 @@
 	  <div id="Pessoais" class="w3-container city" 
 	   
 	  <div class="fomr">
-				<h2>Dados Pessoais</h2>
+				<h2>Dados Pessoais</h2> 
 		  <form action="{{ route('EleitorSalvar') }}" method="get">
 			
 		    <label >NOME</label>
@@ -57,7 +57,7 @@
 				<label>SESSÃO</label>
 		  	<input type="text" id="sessao"  name="sessao" required>
 
-		  	<label>CPF</label>
+ 		  	<label>CPF</label>
 		  	<input type="text" id="cpf" name="cpf" required>
 
 		  	<label>CEP</label>

@@ -16,11 +16,17 @@ Route::get('TelaInicial', 'LoginController@Tela')->name('TelaInicial');
 /* Route do Cadastrar Eleitor */
 Route::get('CadastrarEleitor', 'cadastrarController@Eleitor')->name('CadastrarEleitor');
 Route::get('EleitorSalvar', 'cadastrarController@Salvar')->name('EleitorSalvar');
+Route::get('EleitorListar', 'cadastrarController@Listar')->name('EleitorListar');
+
 
 /* Route do Cadastrar Ajuda */
 Route::get('cadastrarAjuda', 'cadastrarAjudaController@Ajuda')->name('cadastrarAjuda');
 Route::get('AjudaSalvar', 'cadastrarAjudaController@Ajuda_Salvar')->name('AjudaSalvar');
-
+Route::get('AjudaListar', 'cadastrarAjudaController@AjudaListar')->name('AjudaListar');
+Route::get('AjudaVisualisar/{id}', 'cadastrarAjudaController@AjudaVisualisar')->name('AjudaVisualisar');
+Route::get('AjudaEditar/{id}', 'cadastrarAjudaController@AjudaEditar')->name('AjudaEditar');
+Route::get('AjudaExcluir/{id}', 'cadastrarAjudaController@AjudaExcluir')->name('AjudaExcluir');
+Route::get('AjudaAtualizar', 'cadastrarAjudaController@AjudaAtualizar')->name('AjudaAtualizar');
 
 
 Route::get('regioes', 'Regioes@pesquisaregioes')->name('regioes');
