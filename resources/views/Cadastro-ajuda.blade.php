@@ -15,7 +15,7 @@
 		<div class="fomr">
 		<h1>Ajuda</h1>
 	
-					<label for=""><b>NOME ELEITOR</b></label>
+					<label for=""><b>NOME do ELEITOR</b></label>
 					<input type="text" placeholder="Nome do Eleitor" name="nome_e" id="" required value="{{old('nome_e')}}"[[>
 	
 					<label>ADESIVO</label>
