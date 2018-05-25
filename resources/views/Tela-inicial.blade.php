@@ -18,7 +18,7 @@
 		}
 		.fundo{ 	
 		    margin: 0px;
-		    margin-left: -50px;
+		    margin-left: -30px;
 		}
 	
 	</style>
@@ -30,7 +30,7 @@
 	  <a href="#" class="w3-bar-item w3-button">Cadastrar Lançamento</a>
 	  <a href="{{ route('cadastrarAjuda') }}" class="w3-bar-item w3-button">Cadastrar Ajuda</a>
 	  <a href="#" class="w3-bar-item w3-button">Cadastrar Fornecedor</a>
-	  <a href="#" class="w3-bar-item w3-button">Eleitor</a>
+	  <a href="{{ route('EleitorListar')}}" class="w3-bar-item w3-button">Eleitor</a>
 	  <a href="{{ route('AjudaListar')}}" class="w3-bar-item w3-button">Ajudas</a>
 	  <a href="#" class="w3-bar-item w3-button">Agenda</a>
 	  <a href="#" class="w3-bar-item w3-button">Regioes</a>

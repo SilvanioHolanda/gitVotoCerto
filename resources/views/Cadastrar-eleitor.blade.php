@@ -1,5 +1,6 @@
 @extends('tela-em-comum')
 @section('comum')
+
 	<div class="w3-container"> <!--  -->
 	  <h2>Cadastrar Eleitor</h2>
 
@@ -10,9 +11,7 @@
 	    <a href="javascript:void(0)" onclick="opcoescadastro(event, 'Sociais');">
 	      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Dados Sociais</div>
 	    </a>
-	    <a href="javascript:void(0)" onclick="opcoescadastro(event, 'Dependentes');">
-	      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Dependentes</div>
-	    </a>
+	   
 	  </div>
 
 	  <div id="Pessoais" class="w3-container city" 
@@ -37,7 +36,7 @@
 		  	<input type="date" id="DataNascimento" name="DataNascimento" required> </br></br> 
 
 		  	<label>E-MAIL</label>
-		  	<input type="text" id="e-mail" name="email" required>
+		  	<input type="text" id="email" name="email" required>
 
 
 		  	<label>ESTADO CIVIL</label>
@@ -99,34 +98,13 @@
 		    </select>
 
 		    <label>RELIGIÃO</label>
-		  	<input type="text" id="religiao" name="religiao" required>
-	  </div>
-
-	  <div id="Dependentes" class="w3-container city" style="display:none">
-	    <h2>Dependentes</h2>
-	    	<label>Nome</label>
-		  	<input type="text" id="nomedependente" name="nomedependente">
-
-		  	<label>Parentesco</label>
-		    <select id="parentesco" name="parentesco">
-		      <option value="conjuge">CÔNJUGE</option>		
-		      <option value="filho">FILHO(A)</option>
-		      <option value="irmão">IRMÃO(A)</option>
-		      <option value="neto">NETO(A)</option>
-		      <option value="tio">TIO(A)</option>
-		      <option value="sobrinho">SOBRINHO(A)</option>
-		      <option value="pai">PAI</option>
-		      <option value="mae">MÃE</option>
-		      <option value="primo">PRIMO</option>
-		    </select>
-
-
-		  	
-		  	<input type="button" value="+">
-	    	<input type="submit" value="Concluir">
+				<input type="text" id="religiao" name="religiao" required>				
+				<input type="submit" value="Concluir">
 		</div>
-		
 	</div>
+</div>	
+
+</div>
 </div>
 </form>
 

@@ -16,7 +16,14 @@ Route::get('TelaInicial', 'LoginController@Tela')->name('TelaInicial');
 /* Route do Cadastrar Eleitor */
 Route::get('CadastrarEleitor', 'cadastrarController@Eleitor')->name('CadastrarEleitor');
 Route::get('EleitorSalvar', 'cadastrarController@Salvar')->name('EleitorSalvar');
-Route::get('EleitorListar', 'cadastrarController@Listar')->name('EleitorListar');
+Route::get('EleitorListar', 'cadastrarController@EleitorListar')->name('EleitorListar');
+Route::get('EleitorVisualisar/{id}', 'cadastrarController@EleitorVisualisar')->name('EleitorVisualisar');
+Route::get('EleitorEditar/{id}', 'cadastrarController@EleitorEditar')->name('EleitorEditar');
+Route::get('EleitorExcluir/{id}', 'cadastrarController@EleitorExcluir')->name('EleitorExcluir');
+Route::get('EleitorAtualizar', 'cadastrarController@EleitorAtualizar')->name('EleitorAtualizar');
+
+
+
 
 
 /* Route do Cadastrar Ajuda */

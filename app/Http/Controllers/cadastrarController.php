@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Eleitor;
 
 class cadastrarController extends Controller{
 
@@ -16,6 +17,9 @@ class cadastrarController extends Controller{
             'telefone'    => 'required|integer',
             'DataNascimento'    => 'required',
             'email'    => 'required|email',
+            'tituloeleitor'    => 'required',
+            'zona'    => 'required',
+            'sessao'    => 'required',
             'cpf'    => 'required',
             'cep'    => 'required',
             'bairro'    => 'required',
@@ -24,12 +28,18 @@ class cadastrarController extends Controller{
             'numero'    => 'required|integer',
             'complemento'    => 'required',
             'profissao'    => 'required',
-            'religiao'    => 'required',
-            'nomedependente'    => 'required',
+            'religiao'    => 'required'
             
         ]);
         
         return view('Tela-inicial'); 
     }
+    public function EleitorListar(){
+        $dados = [
+            'Eleitor' => Eleitor::all()
+        ];
+        return view('listareleitores', $dados);
+    }
+
 }
  

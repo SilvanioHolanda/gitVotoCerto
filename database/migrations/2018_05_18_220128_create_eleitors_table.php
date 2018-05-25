@@ -22,8 +22,8 @@ class CreateEleitorsTable extends Migration
             $table->string('email');
             $table->string('estadocivil');
             $table->string('tituloeleitor');
-            $table->intinger('zona');
-            $table->intinger('sessao');
+            $table->integer('zona');
+            $table->integer('sessao');
             $table->string('cpf');
             $table->string('cep');
             $table->string('bairro');
@@ -34,8 +34,7 @@ class CreateEleitorsTable extends Migration
             $table->string('profissao');
             $table->string('grauinstrucao');
             $table->string('religiao');
-            $table->string('nomedependente');   
-            $table->string('parentesco');
+            $table->timestamps();
 
         });
     }
