@@ -31,7 +31,7 @@
         <input type="date" id="DataNascimento" name="DataNascimento" required> </br></br> 
 
         <label>E-MAIL</label>
-				<input type="text" id="email" name="email" required>
+				<input type="text" placeholder=""  name="email">
 				
         <label>ESTADO CIVIL</label>
         <select id="estadocivil" name="estadocivil">
@@ -70,10 +70,10 @@
         <input type="text" id="numero" name="numero" required>
 
         <label>COMPLEMENTO</label>
-        <input type="text" id="complemento" name="complemento" required>
+        <input type="text" placeholder="" name="complemento">
 
                 <label>PROFISSÃO</label>
-        <input type="text" id="profissao" name="profissao" required>
+        <input type="text" id="profissao" name="profissao">
 
         <label>GRAU DE INSTRUÇÃO</label>
         <select id="grauinstrucao" name="grauinstrucao">
@@ -88,7 +88,7 @@
         </select>
 
         <label>RELIGIÃO</label>
-        <input type="text" id="religiao" name="religiao" required>
+        <input type="text" id="religiao" name="religiao">
 
 
 

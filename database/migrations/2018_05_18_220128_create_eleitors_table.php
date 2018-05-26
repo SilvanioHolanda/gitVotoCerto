@@ -19,7 +19,7 @@ class CreateEleitorsTable extends Migration
             $table->string('sexo');
             $table->string('telefone');
             $table->string('DataNascimento');
-            $table->string('email');
+            $table->string('email')->default('email não fornecido');
             $table->string('estadocivil');
             $table->string('tituloeleitor');
             $table->integer('zona');
@@ -30,10 +30,10 @@ class CreateEleitorsTable extends Migration
             $table->string('cidade');
             $table->string('uf'); 
             $table->string('numero');
-            $table->string('complemento');
-            $table->string('profissao');
+            $table->string('complemento')->default('N/A');
+            $table->string('profissao')->default('Não Informado');
             $table->string('grauinstrucao');
-            $table->string('religiao');
+            $table->string('religiao')->default('Não Informado');
             $table->timestamps();
 
         });

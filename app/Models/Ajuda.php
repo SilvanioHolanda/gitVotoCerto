@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ajuda extends Model
 {
-    protected $fillable = ['id','nome_e','adesivo','adesivoveicular','descricao','descricao-p','valor'];
+    protected $fillable = ['id','nome_e','adesivo','adesivoveicular','descricao','valor'];
 }

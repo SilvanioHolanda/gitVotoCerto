@@ -14,9 +14,9 @@ class cadastrarController extends Controller{
     public function Salvar(Request $request){
         $request->validate([
             'nome'    => 'required',
+            'sexo'    =>'required',
             'telefone'    => 'required|integer',
             'DataNascimento'    => 'required',
-            'email'    => 'required|email',
             'tituloeleitor'    => 'required',
             'zona'    => 'required',
             'sessao'    => 'required',
@@ -25,14 +25,15 @@ class cadastrarController extends Controller{
             'bairro'    => 'required',
             'cidade'    => 'required',
             'uf'    => 'required',
-            'numero'    => 'required|integer',
-            'complemento'    => 'required',
-            'profissao'    => 'required',
-            'religiao'    => 'required'
+            'numero'    => 'required|integer'
             
         ]);
-        
-        Eleitor::create($request->all());
+        $dados = $request->all();
+        if (empty($dados['email'])) unset($dados['email']);
+        if (empty($dados['complemento'])) unset($dados['complemento']);
+        if (empty($dados['profissao'])) unset($dados['profissao']);
+        if (empty($dados['religiao'])) unset($dados['religiao']);
+        Eleitor::create($dados);
         return view('Tela-inicial'); 
     }
     public function EleitorListar(){

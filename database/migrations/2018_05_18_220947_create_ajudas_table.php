@@ -19,7 +19,6 @@ class CreateAjudasTable extends Migration
             $table->string('adesivo');
             $table->string('adesivoveicular');  
             $table->string('descricao');
-            $table->string('descricao-p')->default('nenhuma pendencia');
             $table->integer('valor');
             $table->timestamps();
          

@@ -33,14 +33,6 @@
 					<label for=""><b>DESCRIÇÃO</b></label>
 					<input type="text" placeholder="" name="descricao" required>
 	
-					<label for=""><b>PENDENCIA?</b></label>
-					<input type="text" placeholder="" name="descricao-p">
-	
-					<label class="container">Gerar Lançamento <!-- botão cheched -->
-					<input type="checkbox" checked="checked">
-					<span class="checkmark"></span>
-					</label>   </br> </br>
-	
 					<label for=""><b>VALOR LANÇAMENTO</b></label>
 					<input type="integer" placeholder="" name="valor" required>
 	

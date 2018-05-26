@@ -34,15 +34,7 @@
 					</select>
 	
 					<label for=""><b>DESCRIÇÃO</b></label>
-					<input type="text" placeholder="" name="descricao" required value="{{old('descricao',$Ajuda['descricao'])}}">
-	
-					<label for=""><b>PENDENCIA?</b></label>
-					<input type="text" placeholder="" name="descricao-p" value="{{old('descricao-p',$Ajuda['descricao-p'])}}">
-	
-					<label class="container">Gerar Lançamento <!-- botão cheched -->
-					<input type="checkbox" checked="checked">
-					<span class="checkmark"></span>
-					</label>   </br> </br>
+					<input type="text" placeholder="" name="descricao" required value="{{old('descricao',$Ajuda['descricao'])}}"
 	
 					<label for=""><b>VALOR LANÇAMENTO</b></label>
 					<input type="integer" placeholder="" name="valor" required value="{{old('valor',$Ajuda['valor'])}}">
