@@ -10,13 +10,17 @@
             @endforeach
         </ul>
     </div>
-@endif
-
+@endif      
 		<div class="fomr">
 		<h1>Ajuda</h1>
 	
-					<label for=""><b>NOME do ELEITOR</b></label>
-					<input type="text" placeholder="Nome do Eleitor" name="nome_e" id="" required value="{{old('nome_e')}}"[[>
+					<label for="nome_e"><b>NOME do ELEITOR</b></label>
+					<select name="nome_e" id="nome_e" value="{{old('nome_e')}}" classe="form-control">
+						@foreach ($eleitors as $elei)
+						<option value="{{$elei->nome}}">{{$elei->nome}}</option>
+						@endforeach
+					</select>
+
 	
 					<label>ADESIVO</label>
 					<select id="adesivo" name="adesivo">

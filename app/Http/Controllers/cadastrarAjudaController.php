@@ -4,11 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Ajuda;
+use App\Moldels\Eleitor;
 
 class cadastrarAjudaController extends Controller
 {
     public function Ajuda(){
         return view('cadastro-ajuda');
+    }
+    public function Eleitor(){ // Rota de consulta
+        $dados = [           
+            'eleitors'  => Eleitor::all(),
+        ]; 
+        return view('Cadastro-ajuda', $dados);
     }
 
     public function Ajuda_Salvar(Request $request){
