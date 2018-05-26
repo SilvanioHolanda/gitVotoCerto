@@ -16,7 +16,7 @@
 	
 					<label for="nome_e"><b>NOME do ELEITOR</b></label>
 					<select name="nome_e" id="nome_e" value="{{old('nome_e')}}" classe="form-control">
-						@foreach ($eleitors as $elei)
+						@foreach ($eleitores as $elei)
 						<option value="{{$elei->nome}}">{{$elei->nome}}</option>
 						@endforeach
 					</select>

@@ -4,16 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Ajuda;
-use App\Moldels\Eleitor;
+use App\Models\Eleitor;
 
 class cadastrarAjudaController extends Controller
 {
     public function Ajuda(){
-        return view('cadastro-ajuda');
-    }
-    public function Eleitor(){ // Rota de consulta
         $dados = [           
-            'eleitors'  => Eleitor::all(),
+            'eleitores'  => Eleitor::all(),
         ]; 
         return view('Cadastro-ajuda', $dados);
     }
@@ -26,7 +23,7 @@ class cadastrarAjudaController extends Controller
         ]);
 
         
-       Ajuda::create($dados);
+       Ajuda::create($request->all());
 
         return view ('Tela-inicial');
     } 
