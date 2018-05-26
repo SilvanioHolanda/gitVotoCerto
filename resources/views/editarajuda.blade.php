@@ -18,18 +18,19 @@
 					<label for=""><b>NOME do ELEITOR</b></label>
 					
 					<input type="hidden" name="id" value="{{$Ajuda->id}}">
+					
 					<input type="text" placeholder="Nome do Eleitor" name="nome_e" id="" required value="{{old('nome_e', $Ajuda['nome_e'])}}">
 	
 					<label>ADESIVO</label>
-					<select id="adesivo" name="adesivo" value="{{old('adesivo',$Ajuda['adesivo'])}}">
-					<option value="Sim">SIM</option>
-					<option value="Não">NÃO</option>		     
+					<select name="adesivo">
+					<option value="Sim" @if(old('adesivo',$Ajuda['adesivo']) == "Sim") selected @endif>SIM</option>
+					<option value="Não" @if(old('adesivo',$Ajuda['adesivo']) == "Não") selected @endif>NÃO</option>		     
 					</select>
 	
 					<label>ADESIVO VEICULAR</label>
-					<select name="adesivoveicular" value="{{old('adesivoveicular',$Ajuda['adesivoveicular'])}}">
-					<option value="Sim">SIM</option>
-					<option value="Não">NÃO</option>		     
+					<select name="adesivoveicular">
+					<option value="Sim" @if(old('adesivoveicular',$Ajuda['adesivoveicular']) == "Sim") selected @endif>SIM</option>
+					<option value="Não" @if(old('adesivoveicular',$Ajuda['adesivoveicular']) == "Não") selected @endif>NÃO</option>			     
 					</select>
 	
 					<label for=""><b>DESCRIÇÃO</b></label>

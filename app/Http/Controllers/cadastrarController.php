@@ -32,6 +32,7 @@ class cadastrarController extends Controller{
             
         ]);
         
+        Eleitor::create($request->all());
         return view('Tela-inicial'); 
     }
     public function EleitorListar(){
@@ -39,6 +40,13 @@ class cadastrarController extends Controller{
             'Eleitor' => Eleitor::all()
         ];
         return view('listareleitores', $dados);
+    }
+    public function EleitorVisualisar($id)
+    {
+        $dados = [
+            'Eleitor' => Eleitor::find($id)
+        ];
+        return view('eleitorvisualisar', $dados);     
     }
 
 }
