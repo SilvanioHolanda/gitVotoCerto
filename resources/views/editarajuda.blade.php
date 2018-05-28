@@ -1,7 +1,7 @@
 @extends('tela-em-comum')
 @section('comum')
 	  
-    <form action= "{{ route('AjudaAtualizar') }}" style="border:#ccc">
+    <form action= "{{ route('AjudaAtualizar',['id' => $Ajuda['id']]) }}" style="border:#ccc">
 	  @if ($errors->any())
     <div class="alert alert-danger">
         <ul>

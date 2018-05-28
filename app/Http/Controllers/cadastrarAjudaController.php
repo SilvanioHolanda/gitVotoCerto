@@ -48,14 +48,14 @@ class cadastrarAjudaController extends Controller
      ];
      return view('editarajuda', $dados);     
     }
-    public function AjudaAtualizar(Request $request)
+    public function AjudaAtualizar(Request $request, $id)
     {
         $request->validate([
             'nome_e'      => 'required',
             'descricao'   => 'required',        
             'valor'       => 'required|integer',
         ]);
-        echo $request->id;
+        
         Ajuda::where('id', $request->id)->update($request->all());
        
         return redirect()->route('AjudaListar');

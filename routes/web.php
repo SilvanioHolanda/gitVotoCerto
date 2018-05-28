@@ -33,7 +33,7 @@ Route::get('AjudaListar', 'cadastrarAjudaController@AjudaListar')->name('AjudaLi
 Route::get('AjudaVisualisar/{id}', 'cadastrarAjudaController@AjudaVisualisar')->name('AjudaVisualisar');
 Route::get('AjudaEditar/{id}', 'cadastrarAjudaController@AjudaEditar')->name('AjudaEditar');
 Route::get('AjudaExcluir/{id}', 'cadastrarAjudaController@AjudaExcluir')->name('AjudaExcluir');
-Route::get('AjudaAtualizar', 'cadastrarAjudaController@AjudaAtualizar')->name('AjudaAtualizar');
+Route::get('AjudaAtualizar/{id}', 'cadastrarAjudaController@AjudaAtualizar')->name('AjudaAtualizar');
 
 
 Route::get('regioes', 'Regioes@pesquisaregioes')->name('regioes');
