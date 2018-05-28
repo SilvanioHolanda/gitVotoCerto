@@ -49,6 +49,39 @@ class cadastrarController extends Controller{
         ];
         return view('eleitorvisualisar', $dados);     
     }
+    public function EleitorEditar($id)
+    {
+     $dados = [
+         'Eleitor' => Eleitor::find($id)
+     ];
+     return view('eleitoreditar', $dados);     
+    }
+    public function EleitorAtualizar(Request $request)
+    {
+        $request->validate([
+            'nome'    => 'required',
+            'sexo'    =>'required',
+            'telefone'    => 'required|integer',
+            'DataNascimento'    => 'required',
+            'tituloeleitor'    => 'required',
+            'zona'    => 'required',
+            'sessao'    => 'required',
+            'cpf'    => 'required',
+            'cep'    => 'required',
+            'bairro'    => 'required',
+            'cidade'    => 'required',
+            'uf'    => 'required',
+            'numero'    => 'required|integer',
+        ]);     
+        Eleitor::where('id', $request->$id)->update($request->all());
+       
+        return redirect()->route('EleitorListar');
+    }
+    public function EleitorExcluir($id)
+    {
+        Eleitor::destroy($id);
+        return redirect()->route('EleitorListar');
+             
+    }
 
 }
- 
