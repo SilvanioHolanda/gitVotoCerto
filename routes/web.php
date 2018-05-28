@@ -20,7 +20,7 @@ Route::get('EleitorListar', 'cadastrarController@EleitorListar')->name('EleitorL
 Route::get('EleitorVisualisar/{id}', 'cadastrarController@EleitorVisualisar')->name('EleitorVisualisar');
 Route::get('EleitorEditar/{id}', 'cadastrarController@EleitorEditar')->name('EleitorEditar');
 Route::get('EleitorExcluir/{id}', 'cadastrarController@EleitorExcluir')->name('EleitorExcluir');
-Route::get('EleitorAtualizar', 'cadastrarController@EleitorAtualizar')->name('EleitorAtualizar');
+Route::get('EleitorAtualizar/{id}', 'cadastrarController@EleitorAtualizar')->name('EleitorAtualizar');
 
 
 

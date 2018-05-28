@@ -28,7 +28,7 @@ class cadastrarController extends Controller{
             'numero'    => 'required|integer'
             
         ]);
-        $dados = $request->all();
+        $dados = ($request->all());
         if (empty($dados['email'])) unset($dados['email']);
         if (empty($dados['complemento'])) unset($dados['complemento']);
         if (empty($dados['profissao'])) unset($dados['profissao']);
@@ -56,7 +56,7 @@ class cadastrarController extends Controller{
      ];
      return view('eleitoreditar', $dados);     
     }
-    public function EleitorAtualizar(Request $request)
+    public function EleitorAtualizar(Request $request, $id)
     {
         $request->validate([
             'nome'    => 'required',
