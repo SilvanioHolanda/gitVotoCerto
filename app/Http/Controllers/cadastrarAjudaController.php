@@ -28,9 +28,15 @@ class cadastrarAjudaController extends Controller
         return view ('Tela-inicial');
     } 
 
-    public function AjudaListar(){
+    public function AjudaListar(Request $request){
+
+        if($request->pesquisar)
+            $Ajudas = Ajuda::where('nome_e', 'like', '%'.$request->pesquisar.'%')->get();
+        else
+         $Ajudas = Ajuda::all();
+
         $dados = [
-            'Ajudas' => Ajuda::all()
+            'Ajudas' => $Ajudas
         ];
         return view('listarajudas', $dados);
     }

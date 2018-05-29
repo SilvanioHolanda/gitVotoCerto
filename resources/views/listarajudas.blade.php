@@ -5,15 +5,16 @@
 
         <h3>Ajudas</h3> </br>
 
-        
+        <form method="get" action="">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Buscar" name="search">
+            <input type="text" class="form-control" placeholder="Buscar" name="pesquisar">
             <div class="input-group-btn">
                 <button class="btn btn-default" type="submit">
                 <i class="glyphicon glyphicon-search"></i>
                 </button>
             </div>
         </div>
+        </form>
 
         <table class="table table-hover">
             <thead>

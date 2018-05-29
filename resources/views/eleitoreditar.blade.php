@@ -13,7 +13,7 @@
 @endif
 
         <div class="fomr">
-        <h1>Ajuda</h1>
+        <h1>Eleitor</h1>
     
            <label >NOME</label>
 				<input type="text" readonly="readonly" id="nome" name="nome" placeholder="Nome Eleitor..." required value="{{old('nome', $Eleitor['nome'])}}">
@@ -21,8 +21,8 @@
 	
            <label>SEXO</label>
            <select id="sexo" name="sexo">
-          <option value="masculino">Masculino</option>
-          <option value="feminino">Feminino</option>         
+          <option value="masculino" @if(old('sexo',$Eleitor['sexo']) == "masculino") selected @endif>Masculino</option>
+          <option value="feminino" @if(old('sexo',$Eleitor['sexo']) == "feminino") selected @endif>Feminino</option>         
           </select>
 
         <label>TELEFONE</label>
@@ -32,14 +32,14 @@
         <input type="date" id="DataNascimento" name="DataNascimento" required value="{{old('DataNascimento', $Eleitor['DataNascimento'])}}"> </br></br> 
 
         <label>E-MAIL</label>
-				<input type="text" placeholder=""  name="email">
+				<input type="text" placeholder=""  name="email" value="{{old('email', $Eleitor['email'])}}">
 				
         <label>ESTADO CIVIL</label>
         <select id="estadocivil" name="estadocivil">
-          <option value="casado">CASADO</option>
-          <option value="solteiro">SOLTEIRO</option>
-          <option value="viuvo">VIUVO</option>
-          <option value="divorciado">DIVORCIADO</option>
+          <option value="casado" @if(old('estadocivil',$Eleitor['estadocivil']) == "casado") selected @endif>CASADO</option>
+          <option value="solteiro" @if(old('estadocivil',$Eleitor['estadocivil']) == "solteiro") selected @endif>SOLTEIRO</option>
+          <option value="viuvo" @if(old('estadocivil',$Eleitor['estadocivil']) == "viuvo") selected @endif>VIUVO</option>
+          <option value="divorciado" @if(old('estadocivil',$Eleitor['estadocivil']) == "divorciado") selected @endif>DIVORCIADO</option>
         </select>
 
       
@@ -71,25 +71,25 @@
         <input type="text" id="numero" name="numero" required value="{{old('numero', $Eleitor['numero'])}}">
 
         <label>COMPLEMENTO</label>
-        <input type="text" placeholder="" name="complemento">
+        <input type="text" placeholder="" name="complemento" value="{{old('complemento', $Eleitor['complemento'])}}">
 
                 <label>PROFISSÃO</label>
-        <input type="text" id="profissao" name="profissao">
+        <input type="text" id="profissao" name="profissao" value="{{old('profissao', $Eleitor['profissao'])}}">
 
         <label>GRAU DE INSTRUÇÃO</label>
         <select id="grauinstrucao" name="grauinstrucao">
-          <option value="analfabeto">ANALFABETO</option>
-          <option value="ensinofundamental">ENSINO FUNDAMENTAL INCOMPLETO</option>
-          <option value="ensinofundamentalcompleto">ENSINO FUNDAMENTAL COMPLETO</option>
-          <option value="ensinomedio">ENSINO MEDIO INCOMPLETO</option>
-          <option value="ensinomediocompleto">ENSINO MEDIO COMPLETO</option>
-          <option value="superior">SUPERIOR</option>
-          <option value="mestrado">MESTRADO</option>
-          <option value="doutorado">DOUTORADO</option>
+          <option value="analfabeto" @if(old('grauinstrucao',$Eleitor['grauinstrucao']) == "analfabeto") selected @endif>ANALFABETO</option>
+          <option value="ensinofundamental" @if(old('grauinstrucao',$Eleitor['grauinstrucao']) == "ensinofundamental") selected @endif>ENSINO FUNDAMENTAL INCOMPLETO</option>
+          <option value="ensinofundamentalcompleto" @if(old('grauinstrucao',$Eleitor['grauinstrucao']) == "ensinofundamentalcompleto") selected @endif>ENSINO FUNDAMENTAL COMPLETO</option>
+          <option value="ensinomedio" @if(old('grauinstrucao',$Eleitor['grauinstrucao']) == "ensinomedio") selected @endif>ENSINO MEDIO INCOMPLETO</option>
+          <option value="ensinomediocompleto" @if(old('grauinstrucao',$Eleitor['grauinstrucao']) == "ensinomediocompleto") selected @endif>ENSINO MEDIO COMPLETO</option>
+          <option value="superior" @if(old('grauinstrucao',$Eleitor['grauinstrucao']) == "superior") selected @endif>SUPERIOR</option>
+          <option value="mestrado" @if(old('grauinstrucao',$Eleitor['grauinstrucao']) == "mestrado") selected @endif>MESTRADO</option>
+          <option value="doutorado" @if(old('grauinstrucao',$Eleitor['grauinstrucao']) == "doutorado") selected @endif>DOUTORADO</option>
         </select>
 
         <label>RELIGIÃO</label>
-        <input type="text" id="religiao" name="religiao">
+        <input type="text" id="religiao" name="religiao" value="{{old('religiao', $Eleitor['religiao'])}}">
 
 
 

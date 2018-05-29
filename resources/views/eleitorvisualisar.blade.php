@@ -19,7 +19,7 @@
 				<input type="text" readonly="readonly"  id="nome" name="nome" placeholder="Nome Eleitor..." required value="{{old('nome', $Eleitor['nome'])}}">
 			
            <label>SEXO</label>
-        <select id="sexo">        
+        <select id="sexo" name"sexo">        
           <option value="masculino" @if(old('sexo',$Eleitor['sexo']) == "masculino") selected @endif>Masculino</option>
           <option value="feminino" @if(old('sexo',$Eleitor['sexo']) == "feminino") selected @endif>Feminino</option>         
         </select>

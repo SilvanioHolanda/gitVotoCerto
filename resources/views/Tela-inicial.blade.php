@@ -9,7 +9,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
 		label{
-			margin-left: 485px;
+			margin-left: 400px;
 			display: inline-block;
 			margin-top: 8px;
 		}

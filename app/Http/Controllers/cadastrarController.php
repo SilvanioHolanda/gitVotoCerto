@@ -36,9 +36,13 @@ class cadastrarController extends Controller{
         Eleitor::create($dados);
         return view('Tela-inicial'); 
     }
-    public function EleitorListar(){
+    public function EleitorListar(Request $request){
+        if($request->pesquisar)
+            $Eleitor = Eleitor::where('nome', 'like', '%'.$request->pesquisar.'%')->get();
+        else
+         $Eleitor = Eleitor::all();
         $dados = [
-            'Eleitor' => Eleitor::all()
+            'Eleitor' => $Eleitor
         ];
         return view('listareleitores', $dados);
     }
@@ -71,10 +75,11 @@ class cadastrarController extends Controller{
             'bairro'    => 'required',
             'cidade'    => 'required',
             'uf'    => 'required',
-            'numero'    => 'required|integer',
-        ]);     
-        Eleitor::where('id', $request->$id)->update($request->all());
-       
+            'numero'    => 'required|integer'
+        ]);
+             
+        Eleitor::where('id',$id)->update($request->all());
+
         return redirect()->route('EleitorListar');
     }
     public function EleitorExcluir($id)

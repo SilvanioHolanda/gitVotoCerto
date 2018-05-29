@@ -15,7 +15,7 @@
         <div class="fomr">
         <h1>Ajuda</h1>
     
-           <label >NOME</label>
+           <label>NOME</label>
 				<input type="text" id="nome" name="nome" placeholder="Nome Eleitor..." required>
 				
            <label>SEXO</label>
