@@ -21,6 +21,7 @@ Route::get('EleitorVisualisar/{id}', 'cadastrarController@EleitorVisualisar')->n
 Route::get('EleitorEditar/{id}', 'cadastrarController@EleitorEditar')->name('EleitorEditar');
 Route::get('EleitorExcluir/{id}', 'cadastrarController@EleitorExcluir')->name('EleitorExcluir');
 Route::get('EleitorAtualizar/{id}', 'cadastrarController@EleitorAtualizar')->name('EleitorAtualizar');
+Route::get('Graficos', 'cadastrarController@Graficos')->name('Graficos');
 
 
 
@@ -35,8 +36,6 @@ Route::get('AjudaEditar/{id}', 'cadastrarAjudaController@AjudaEditar')->name('Aj
 Route::get('AjudaExcluir/{id}', 'cadastrarAjudaController@AjudaExcluir')->name('AjudaExcluir');
 Route::get('AjudaAtualizar/{id}', 'cadastrarAjudaController@AjudaAtualizar')->name('AjudaAtualizar');
 
-
-Route::get('regioes', 'Regioes@pesquisaregioes')->name('regioes');
 
 
 });

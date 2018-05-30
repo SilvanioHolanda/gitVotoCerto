@@ -55,6 +55,9 @@
 
         <label>CEP</label>
         <input type="text" readonly="readonly"  id="cep" name="cep" required value="{{old('cep', $Eleitor['cep'])}}">
+        
+        <label>ENDEREÇO</label>
+        <input type="text" readonly="readonly"  id="complemento" name="complemento" required value="{{old('complemento', $Eleitor['complemento'])}}">
 
         <label>BAIRRO</label>
         <input type="text" readonly="readonly"  id="bairro" name="bairro" required value="{{old('bairro', $Eleitor['bairro'])}}">
@@ -68,10 +71,7 @@
         <label>NUMERO</label>
         <input type="text" readonly="readonly"  id="numero" name="numero" required value="{{old('numero', $Eleitor['numero'])}}">
 
-        <label>COMPLEMENTO</label>
-        <input type="text" readonly="readonly"  id="complemento" name="complemento" required value="{{old('complemento', $Eleitor['complemento'])}}">
-
-                <label>PROFISSÃO</label>
+        <label>PROFISSÃO</label>
         <input type="text"  readonly="readonly" id="profissao" name="profissao" required value="{{old('profissao', $Eleitor['profissao'])}}">
 
         <label>GRAU DE INSTRUÇÃO</label>

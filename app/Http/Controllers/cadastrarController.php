@@ -15,7 +15,7 @@ class cadastrarController extends Controller{
         $request->validate([
             'nome'    => 'required',
             'sexo'    =>'required',
-            'telefone'    => 'required|integer',
+            'telefone'    => 'required',
             'DataNascimento'    => 'required',
             'tituloeleitor'    => 'required',
             'zona'    => 'required',
@@ -25,7 +25,7 @@ class cadastrarController extends Controller{
             'bairro'    => 'required',
             'cidade'    => 'required',
             'uf'    => 'required',
-            'numero'    => 'required|integer'
+            'numero'    => 'required'
             
         ]);
         $dados = ($request->all());
@@ -65,7 +65,7 @@ class cadastrarController extends Controller{
         $request->validate([
             'nome'    => 'required',
             'sexo'    =>'required',
-            'telefone'    => 'required|integer',
+            'telefone'    => 'required',
             'DataNascimento'    => 'required',
             'tituloeleitor'    => 'required',
             'zona'    => 'required',
@@ -75,7 +75,7 @@ class cadastrarController extends Controller{
             'bairro'    => 'required',
             'cidade'    => 'required',
             'uf'    => 'required',
-            'numero'    => 'required|integer'
+            'numero'    => 'required'
         ]);
              
         Eleitor::where('id',$id)->update($request->all());
@@ -87,6 +87,18 @@ class cadastrarController extends Controller{
         Eleitor::destroy($id);
         return redirect()->route('EleitorListar');
              
+    }
+    public function Graficos()
+    {
+        $pastel = Eleitor::
+                  select('eleitors.sexo','eleitors.sexo')
+                  ->count('sexo','=','masculino')
+                  ->count('sexo','=','feminino')
+                             
+                  ->get();
+        
+        return view('chart',['pastel'=>$pastel]);
+
     }
 
 }

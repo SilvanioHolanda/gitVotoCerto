@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class LoginController extends Controller{
 
     public function Logar(Request $buscar) {
-        if ($buscar->nome == 'admin' && $buscar->senha == '123') {
+        if ($buscar->nome == 'Silvanio' && $buscar->senha == '33441453') {
             session(['usuario' => 'Silvanio']);
             return redirect()->route('TelaInicial');
         }
