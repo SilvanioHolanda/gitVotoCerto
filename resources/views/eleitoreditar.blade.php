@@ -71,7 +71,7 @@
         <input type="text" id="uf" name="uf" required value="{{old('uf', $Eleitor['uf'])}}">
 
         <label>NUMERO</label>
-        <input type="text" id="numero" name="numero" required value="{{old('numero', $Eleitor['numero'])}}">
+        <input type="text" id="numero" name="numero" required value="{{old('numero', $Eleitor['numero'])}}" maxlength="8">
 
                 <label>PROFISSÃO</label>
         <input type="text" id="profissao" name="profissao" value="{{old('profissao', $Eleitor['profissao'])}}">

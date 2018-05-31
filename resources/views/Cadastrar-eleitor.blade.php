@@ -13,7 +13,7 @@
 @endif
 
         <div class="fomr">
-        <h1>Ajuda</h1>
+        <h1>Eleitor</h1>
     
            <label>NOME</label>
 				<input type="text" id="nome" name="nome" placeholder="Nome Eleitor..." required>
@@ -70,7 +70,7 @@
         <input type="text" id="uf" name="uf" required>
 
         <label>NUMERO</label>
-        <input type="text" id="numero" name="numero" required>
+        <input type="text" id="numero" name="numero" required maxlength="8">
 
           <label>PROFISSÃO</label>
         <input type="text" id="profissao" name="profissao">
