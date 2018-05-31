@@ -90,14 +90,20 @@ class cadastrarController extends Controller{
     }
     public function Graficos()
     {
-        $pastel = Eleitor::
-                  select('eleitors.sexo','eleitors.sexo')
-                  ->count('sexo','=','masculino')
-                  ->count('sexo','=','feminino')
-                             
-                  ->get();
+        // $pastel = Eleitor::select('sexo')->count('id')->where('eleitors.sexo','=','masculino')->orWhere('eleitors.sexo','=','feminino')->groupBy('sexo');
+
+
+        $pastel = Eleitor::select('sexo')->where('eleitors.sexo','=','masculino')->count();
+        $pastel2 = Eleitor::select('sexo')->where('eleitors.sexo','=','feminino')->count();
+        $pastel3 = Eleitor::select('estadocivil')->where('eleitors.estadocivil','=','casado')->count();
+        $pastel4 = Eleitor::select('estadocivil')->where('eleitors.estadocivil','=','solteiro')->count();
+        $pastel5 = Eleitor::select('estadocivil')->where('eleitors.estadocivil','=','viuvo')->count();
+        $pastel6 = Eleitor::select('estadocivil')->where('eleitors.estadocivil','=','divorciado')->count();
+               // SELECT count(id) as total, sexo FROM eleitors WHERE eleitors.sexo = 'masculino' or eleitors.sexo = 'feminino' GROUP by sexo;
+
+
         
-        return view('chart',['pastel'=>$pastel]);
+        return view('chart',['pastel'=>$pastel,'pastel2'=>$pastel2,'pastel3'=>$pastel3,'pastel4'=>$pastel4,'pastel5'=>$pastel5,'pastel6'=>$pastel6]);
 
     }
 

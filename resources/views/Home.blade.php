@@ -9,6 +9,15 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/home-tela.css')}}">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+		.fundo { 	
+		    margin: 0px;
+			margin-left: -30px;
+			background: url("https://s3.amazonaws.com/dinder.com.br/wp-content/uploads/sites/125/2015/04/elei%C3%A7%C3%A3o1.jpg") center no-repeat;
+			background-size: cover;
+			height: 626px;
+		}
+  </style>
 </head>
 <body>
 	<div class="w3-bar w3-black"> <!-- MENU SUPERIOR -->
@@ -51,7 +60,7 @@
 			</script>
 	
 			<dir class="fundo">
-				<img src="https://s3.amazonaws.com/dinder.com.br/wp-content/uploads/sites/125/2015/04/elei%C3%A7%C3%A3o1.jpg">
+				{{-- <img src="https://s3.amazonaws.com/dinder.com.br/wp-content/uploads/sites/125/2015/04/elei%C3%A7%C3%A3o1.jpg"> --}}
 			</dir>
 </body>
 </html>
