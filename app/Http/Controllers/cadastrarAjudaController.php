@@ -30,13 +30,23 @@ class cadastrarAjudaController extends Controller
 
     public function AjudaListar(Request $request){
 
-        if($request->pesquisar)
-            $Ajudas = Ajuda::where('nome_e', 'like', '%'.$request->pesquisar.'%')->get();
-        else
-         $Ajudas = Ajuda::all();
-
+       $exibirPorPagina = 10;
+       $offset = ($exibirPorPagina * ($request->query('page', 1)-1));
+       
+       if ($request->pesquisar) {
+           $paginacao = Ajuda::where('nome_e', 'like', $request->pesquisar.'%')->paginate($exibirPorPagina); //Exibe 5 elementos por página
+           $Ajudas = Ajuda::where('nome_e', 'like', $request->pesquisar.'%')->limit($exibirPorPagina) //Quantos valores devem ser exibido 
+                       ->offset($offset) //Começa a exibir a apartir de qual valor
+                       ->get();
+       }  else {
+           $paginacao = Ajuda::paginate($exibirPorPagina); //Exibe 5 elementos por página
+           $Ajudas = Ajuda::limit($exibirPorPagina) //Quantos valores devem ser exibido 
+                           ->offset($offset) //Começa a exibir a apartir de qual valor::all();
+                           ->get();
+       }
         $dados = [
-            'Ajudas' => $Ajudas
+            'Ajudas' => $Ajudas,
+            'paginacao'  => $paginacao
         ];
         return view('listarajudas', $dados);
     }

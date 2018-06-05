@@ -49,6 +49,7 @@
             </tbody>
             <!-- DADOS [FIM] -->
         </table>
+        {{$paginacao}}
     </div>
 </div>
    

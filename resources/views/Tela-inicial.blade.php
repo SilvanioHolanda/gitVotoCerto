@@ -13,7 +13,7 @@
 		}
 
 		label{
-			margin-left: 29px;
+			margin-left: 480px;
 			display: inline-block;
 			margin-top: 8px;
 		}
@@ -34,12 +34,9 @@
 	<div class="w3-bar w3-black">
 	  <a href="{{ route('TelaInicial') }}" class="w3-bar-item w3-button">Voto Certo</a>
 	  <a href="{{ route('CadastrarEleitor') }}" class="w3-bar-item w3-button">Cadastrar Eleitor</a>
-	  <a href="#" class="w3-bar-item w3-button">Cadastrar Lançamento</a>
 	  <a href="{{ route('cadastrarAjuda') }}" class="w3-bar-item w3-button">Cadastrar Ajuda</a>
-	  <a href="#" class="w3-bar-item w3-button">Cadastrar Fornecedor</a>
 	  <a href="{{ route('EleitorListar')}}" class="w3-bar-item w3-button">Eleitor</a>
 	  <a href="{{ route('AjudaListar')}}" class="w3-bar-item w3-button">Ajudas</a>
-	  <a href="#" class="w3-bar-item w3-button">Agenda</a>
 	  <a href="{{ route('Graficos') }}" class="w3-bar-item w3-button">Graficos</a>
 	  <label> Bem Vindo!! {{session('usuario')}} </label>
 	  <a class="w3-bar-item w3-button"  href="{{ route('logout') }}" id="logar" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> <i class="fa fa-sign-in"></i>Deslogar</a>

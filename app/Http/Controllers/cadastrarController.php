@@ -37,12 +37,24 @@ class cadastrarController extends Controller{
         return view('Tela-inicial'); 
     }
     public function EleitorListar(Request $request){
-        if($request->pesquisar)
-            $Eleitor = Eleitor::where('nome', 'like', '%'.$request->pesquisar.'%')->get();
-        else
-         $Eleitor = Eleitor::all();
+       
+       $exibirPorPagina = 10;
+       $offset = ($exibirPorPagina * ($request->query('page', 1)-1));
+       
+       if ($request->pesquisar) {
+           $paginacao = Eleitor::where('Nome', 'like', $request->pesquisar.'%')->paginate($exibirPorPagina); //Exibe 5 elementos por página
+           $Eleitor = Eleitor::where('Nome', 'like', $request->pesquisar.'%')->limit($exibirPorPagina) //Quantos valores devem ser exibido 
+                       ->offset($offset) //Começa a exibir a apartir de qual valor
+                       ->get();
+       }  else {
+           $paginacao = Eleitor::paginate($exibirPorPagina); //Exibe 5 elementos por página
+           $Eleitor = Eleitor::limit($exibirPorPagina) //Quantos valores devem ser exibido 
+                           ->offset($offset) //Começa a exibir a apartir de qual valor::all();
+                           ->get();
+       }
         $dados = [
-            'Eleitor' => $Eleitor
+            'Eleitor' => $Eleitor,
+            'paginacao'  => $paginacao
         ];
         return view('listareleitores', $dados);
     }
