@@ -39,9 +39,9 @@
                     <td class="tex">{{$Ajuda['valor']}}</td>
     
                     <td>
-                        <a href="{{route('AjudaVisualisar', ['id' => $Ajuda['id']])}}" class="btn btn-primary">Visualizar</a>
-                        <a href="{{route('AjudaEditar', ['id' => $Ajuda['id']])}}" class="btn btn-warning">Editar</a>
-                        <a href="{{route('AjudaExcluir', ['id' => $Ajuda['id']])}}" class="btn btn-danger">Excluir</a>
+                        <a href="{{route('AjudaVisualisar', ['id' => $Ajuda['id']])}}" class=""><i class="fas fa-user"></i></a>
+                        <a href="{{route('AjudaEditar', ['id' => $Ajuda['id']])}}" class=""><i class="fas fa-user-edit"></i></a>
+                        <a href="{{route('AjudaExcluir', ['id' => $Ajuda['id']])}}" class=""><i class="fas fa-user-times"></i></a>
                     </td>
                    
                 </tr>
@@ -52,6 +52,17 @@
         {{$paginacao}}
     </div>
 </div>
+
+    <style>
+
+        .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+            z-index: 2;
+            margin-left: -1px;
+            margin-top: 8px;
+        }
+    </style>
+
+
    
     <script type="text/javascript">
         $(function(){

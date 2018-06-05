@@ -10,7 +10,7 @@
                 <input type="text" class="form-control" placeholder="Buscar" name="pesquisar">
                 <div class="input-group-btn">
                     <button class="btn btn-default" type="submit">
-                    <i class="glyphicon glyphicon-search"></i>
+                    <i class="fas fa-search"></i>   
                     </button>
                 </div>
             </div>
@@ -36,9 +36,9 @@
                     <td class="tex">{{$Eleito['tituloeleitor']}}</td>
     
                     <td>
-                        <a href="{{route('EleitorVisualisar', ['id' => $Eleito['id']])}}" class="btn btn-primary">Visualizar</a>
-                        <a href="{{route('EleitorEditar', ['id' => $Eleito['id']])}}" class="btn btn-warning">Editar</a>
-                        <a href="{{route('EleitorExcluir', ['id' => $Eleito['id']])}}" class="btn btn-danger">Excluir</a>
+                        <a href="{{route('EleitorVisualisar', ['id' => $Eleito['id']])}}" class=""><i class="fas fa-user"></i></a>
+                        <a href="{{route('EleitorEditar', ['id' => $Eleito['id']])}}" class=""><i class="fas fa-user-edit"></i></a>
+                        <a href="{{route('EleitorExcluir', ['id' => $Eleito['id']])}}" class=""><i class="fas fa-user-times"></i></a>
                     </td>
                    
                 </tr>
@@ -50,6 +50,15 @@
     </div>
     
 </div>
+
+<style>
+
+    .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+        z-index: 2;
+        margin-left: -1px;
+        margin-top: 8px;
+    }
+</style>
    
     <script type="text/javascript">
         $(function(){

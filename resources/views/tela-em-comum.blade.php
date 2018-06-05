@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
 	<style>
 		input[type=text], select {
@@ -42,7 +43,21 @@
 		#logar{
 			float: right;
 		}
-
+		i.fas.fa-user {
+			font-size: 25px;
+			color: dodgerblue;
+			margin-right: 10px;
+		}
+		i.fas.fa-user-edit {
+			font-size: 25px;
+			color: orange;
+			margin-right: 9px;
+		}
+		i.fas.fa-user-times {
+			font-size: 25px;
+			color: red;
+			margin-right: 9px;
+		}
 	</style>
 </head>
 <body>
