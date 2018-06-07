@@ -19,7 +19,7 @@
         ]);
 
         var options = {
-          title: 'Comparativos'
+          title: '  Sexo Eleitores'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -38,7 +38,7 @@
         ]);
 
         var options2 = {
-          title: 'Estado Civil'
+          title: 'Estado Civil Eleitores'
         };
 
         var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
