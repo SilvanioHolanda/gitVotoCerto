@@ -44,13 +44,15 @@ class cadastrarController extends Controller{
        if ($request->pesquisar) {
            $paginacao = Eleitor::where('Nome', 'like', $request->pesquisar.'%')->paginate($exibirPorPagina); //10 elementos por página
            $Eleitor = Eleitor::where('Nome', 'like', $request->pesquisar.'%')->limit($exibirPorPagina) // valores devem ser exibido 
-                       ->offset($offset) 
+                       ->offset($offset)
+                       ->orderBy('nome') 
                        ->get();
        }  else {
            $paginacao = Eleitor::paginate($exibirPorPagina); 
-           $Eleitor = Eleitor::limit($exibirPorPagina)  
-                           ->offset($offset)
-                           ->get();
+           $Eleitor = Eleitor::limit($exibirPorPagina)
+           ->orderBy('nome')  
+            ->offset($offset)
+            ->get();
        }
         $dados = [
             'Eleitor' => $Eleitor,
